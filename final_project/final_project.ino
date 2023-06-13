@@ -3,6 +3,9 @@
 #include <AsyncDelay.h>
 #define ROLL_THRESHOLD  20 // Total acceleration threshold for roll detect
 
+
+// Variables: 
+
 AsyncDelay delay_3s;
 
 float X, Y, Z, totalAccel, lightLevel;
@@ -133,8 +136,8 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
+// Set up for switches and buttons
 if (switchFlag) {
   Serial.println("game on");
   delay(5);
@@ -142,6 +145,7 @@ if (switchFlag) {
   switchFlag = 0;
   
 }
+// Go to next pixel is button B is pressed
  if (buttonFlagB) {
    m = 0;
    pixelNumber = p++;
@@ -154,6 +158,7 @@ if (switchFlag) {
    buttonFlagB = 0;
    playerTurn();
  }
+ // Change pixel color to next color if button A is pressed
  if (buttonFlagA) {
    colorControl = m++;
    Serial.println("colorControl+1");
@@ -165,14 +170,14 @@ if (switchFlag) {
    buttonFlagA = 0;
    playerTurn();
  }
-
+// Allow game to run if switch is on
 if (switchState) {
 
 lightLevel = CircuitPlayground.lightSensor();
 
-// add for statement?
 checkShaking();
 
+// If circuitboard was shaken, show light pattern
 if (totalAccel > ROLL_THRESHOLD) {
 switch (level) {
   case 0:
@@ -237,7 +242,7 @@ switch (level) {
 delay(1000);
 
 
-
+// If player covered board with hand, check their light pattern against original and give points and change level
 if (lightLevel < 20) {
   tallyPoints();
   delay(500);
@@ -286,6 +291,7 @@ if (totalPoints < -10) {
 }
 
 
+// Function that will give player points
 
 void tallyPoints() {
    //
@@ -386,6 +392,7 @@ CircuitPlayground.clearPixels();
 delay_3s.repeat();
 }
 
+// Function allows player to set their light pattern attempt
 void playerTurn() {
      switch(colorControl) { 
      case 0: //takes two button presses to get to case 1
@@ -477,6 +484,7 @@ void playerTurn() {
   delay(5000);
 }
 
+// Checks if board is shaken
 void checkShaking() {
   X = 0;
   Y = 0;
@@ -494,6 +502,7 @@ void checkShaking() {
   totalAccel = sqrt(X*X + Y*Y + Z*Z);
 }
 
+// Following code are the codes that set the light pattern level, the number of colors in the pattern will increase with every level
 void levelZero() {
   
     Serial.print("Level: "); Serial.println(level);
