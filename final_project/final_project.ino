@@ -294,97 +294,96 @@ if (totalPoints < -10) {
 // Function that will give player points
 
 void tallyPoints() {
-   //
   Serial.println("Check Light Pattern");
 
 if (playerPixelZeroColor == randomPixelZero) {
-  CircuitPlayground.playTone(midi[plusPoint[1][0]], plusPoint[1][1]);
+  CircuitPlayground.playTone(midi[plusPoint[0][0]], 100);
   totalPoints = ++t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 } else {
-  CircuitPlayground.playTone(midi[minusPoint[1][0]], plusPoint[1][1]);
-  totalPoints = t--;
+  CircuitPlayground.playTone(midi[minusPoint[0][0]], 100);
+  totalPoints = --t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 }
 if (playerPixelOneColor == randomPixelOne) {
-  CircuitPlayground.playTone(midi[plusPoint[1][0]], plusPoint[1][1]);
+  CircuitPlayground.playTone(midi[plusPoint[0][0]], 100);
   totalPoints = ++t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 } else {
-  CircuitPlayground.playTone(midi[minusPoint[1][0]], plusPoint[1][1]);
-  totalPoints = t--;
+  CircuitPlayground.playTone(midi[minusPoint[0][0]], 100);
+  totalPoints = --t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 }
 if (playerPixelTwoColor == randomPixelTwo) {
-  CircuitPlayground.playTone(midi[plusPoint[1][0]], plusPoint[1][1]);
+  CircuitPlayground.playTone(midi[plusPoint[0][0]], 100);
   totalPoints = ++t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 } else {
-  CircuitPlayground.playTone(midi[minusPoint[1][0]], plusPoint[1][1]);
-  totalPoints = t--;
+  CircuitPlayground.playTone(midi[minusPoint[0][0]], 100);
+  totalPoints = --t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 }
 if (playerPixelThreeColor == randomPixelThree) {
-  CircuitPlayground.playTone(midi[plusPoint[1][0]], plusPoint[1][1]);
+  CircuitPlayground.playTone(midi[plusPoint[0][0]], 100);
   totalPoints = ++t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 } else {
-  CircuitPlayground.playTone(midi[minusPoint[1][0]], plusPoint[1][1]);
-  totalPoints = t--;
+  CircuitPlayground.playTone(midi[minusPoint[0][0]], 100);
+  totalPoints = --t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 }
 if (playerPixelFourColor == randomPixelFour) {
-  CircuitPlayground.playTone(midi[plusPoint[1][0]], plusPoint[1][1]);
+  CircuitPlayground.playTone(midi[plusPoint[0][0]], 100);
   totalPoints = ++t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 } else {
-  CircuitPlayground.playTone(midi[minusPoint[1][0]], plusPoint[1][1]);
-  totalPoints = t--;
+  CircuitPlayground.playTone(midi[minusPoint[0][0]], 100);
+  totalPoints = --t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 }
 if (playerPixelFiveColor == randomPixelFive) {
-  CircuitPlayground.playTone(midi[plusPoint[1][0]], plusPoint[1][1]);
+  CircuitPlayground.playTone(midi[plusPoint[0][0]], 100);
   totalPoints = ++t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 } else {
-  CircuitPlayground.playTone(midi[minusPoint[1][0]], plusPoint[1][1]);
-  totalPoints = t--;
+  CircuitPlayground.playTone(midi[minusPoint[0][0]], 100);
+  totalPoints = --t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 }
 if (playerPixelSixColor == randomPixelSix) {
-  CircuitPlayground.playTone(midi[plusPoint[1][0]], plusPoint[1][1]);
+  CircuitPlayground.playTone(midi[plusPoint[0][0]], 100);
   totalPoints = ++t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 } else {
-  CircuitPlayground.playTone(midi[minusPoint[1][0]], plusPoint[1][1]);
-  totalPoints = t--;
+  CircuitPlayground.playTone(midi[minusPoint[0][0]], 100);
+  totalPoints = --t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 }
 if (playerPixelSevenColor == randomPixelSeven) {
-  CircuitPlayground.playTone(midi[plusPoint[1][0]], plusPoint[1][1]);
+  CircuitPlayground.playTone(midi[plusPoint[0][0]], 100);
   totalPoints = ++t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 } else {
-  CircuitPlayground.playTone(midi[minusPoint[1][0]], plusPoint[1][1]);
-  totalPoints = t--;
+  CircuitPlayground.playTone(midi[minusPoint[0][0]], 100);
+  totalPoints = --t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 }
 if (playerPixelEightColor == randomPixelEight) {
-  CircuitPlayground.playTone(midi[plusPoint[1][0]], plusPoint[1][1]);
+  CircuitPlayground.playTone(midi[plusPoint[0][0]], 100);
   totalPoints = ++t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 } else {
-  CircuitPlayground.playTone(midi[minusPoint[1][0]], plusPoint[1][1]);
-  totalPoints = t--;
+  CircuitPlayground.playTone(midi[minusPoint[0][0]], 100);
+  totalPoints = --t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 }
 if (playerPixelNineColor == randomPixelNine) {
-  CircuitPlayground.playTone(midi[plusPoint[1][0]], plusPoint[1][1]);
+  CircuitPlayground.playTone(midi[plusPoint[0][0]], 100);
   totalPoints = ++t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 } else {
-  CircuitPlayground.playTone(midi[minusPoint[1][0]], plusPoint[1][1]);
-  totalPoints = t--;
+  CircuitPlayground.playTone(midi[minusPoint[0][0]], 100);
+  totalPoints = --t;
   Serial.print("Total Points: "); Serial.println(totalPoints);
 }
 delay(500);
